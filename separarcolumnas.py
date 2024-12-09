@@ -21,6 +21,6 @@ df.insert(loc=proyecto_index + 2, column='Dirección', value=split_columns[1])  
 
 # Guardar el DataFrame modificado en un nuevo archivo Excel
 output_path = 'IVA_ES_S0132_012024_ACABADO.xlsx'
-df.to_excel(output_path, index=False, engine='openpyxl')
+df.to_excel(output_path, index=False, engine='openpyxl', float_format="%.0f")
 
 print(f"Archivo actualizado guardado correctamente en: {output_path}")
