@@ -1,3 +1,5 @@
+#Tenemos un Excel. Queremos borrar los datos de la columna "Mes inicio periodo" si en la columna "Producto" no es "S0132 - Solar".
+
 import pandas as pd
 
 # Cargar el archivo Excel

@@ -1,3 +1,5 @@
+#Tenemos un Excel. Queremos ver cuantos valores distintos tiene la columna "Producto".
+
 import pandas as pd
 
 # Cargar el archivo Excel

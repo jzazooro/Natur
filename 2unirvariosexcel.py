@@ -1,3 +1,5 @@
+#Tenemos varios archivos Excel en una carpeta. Queremos unir un Excel debajo de otro, debajo de otro... De manera ordenada.
+
 import pandas as pd
 import os
 

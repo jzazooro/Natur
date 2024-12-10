@@ -1,8 +1,10 @@
+#Tenemos varios archivos Excel en una carpeta. La columna "Proyecto" tiene formato "numero de proyecto - direccion". Queremos dividir la columna inicial para obtener las dos columnas por separado.
+
 import os
 import pandas as pd
 
 # Ruta de la carpeta con los archivos Excel
-folder_path = 'archivos'
+folder_path = 'documentos'
 
 # Obtener la lista de todos los archivos en la carpeta
 files = [f for f in os.listdir(folder_path) if f.endswith('.xlsx')]
