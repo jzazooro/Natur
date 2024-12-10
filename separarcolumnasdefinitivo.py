@@ -27,7 +27,7 @@ for file in files:
             proyecto_index = df.columns.get_loc('Proyecto')
 
             # Insertar "Número" y "Dirección" justo después de "Proyecto"
-            df.insert(loc=proyecto_index + 1, column='Número', value=split_columns[0])  # A la derecha de "Proyecto"
+            df.insert(loc=proyecto_index + 1, column='Número de proyeto', value=split_columns[0])  # A la derecha de "Proyecto"
             df.insert(loc=proyecto_index + 2, column='Dirección', value=split_columns[1])  # Después de "Número"
 
             # Guardar el DataFrame modificado en un nuevo archivo Excel
