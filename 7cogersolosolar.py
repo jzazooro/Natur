@@ -1,11 +1,11 @@
 import pandas as pd
 
 # Cargar el archivo Excel
-file_path = 'aca.xlsx'
+file_path = 'IVA_ES_S0132_012025.xlsx'
 excel_data = pd.ExcelFile(file_path)
 
 # Cargar la hoja de datos en un DataFrame
-df = excel_data.parse('Sheet1')
+df = excel_data.parse('Detalle')
 
 # Filtrar el DataFrame para incluir solo filas donde la columna "Producto" sea "S0132 - Solar"
 filtered_df = df[df['Producto'] == 'S0132 - Solar']
