@@ -18,9 +18,9 @@ identificadorproducto = df_modelo.iloc[4, 6]  # O1 corresponde a la fila 1 (índ
 # Celdas a extraer
 celdas_modelo = ["E2", "G4", "G5", "G55", "G58", "G40", "G42", "G43", "G44", "G45", "G46", "G33", "G34", "G36", "O15", "O16"]
 celdas_modeloPPA = ["O19", "O21"]
-celdas_modeloVD = ["K3", "K5"]
-celdas_tabla_balance = ["B3", "C3", "D3"]
-
+celdas_modeloVD = ["K3", "K8"]
+celdas_hr = ["E3", "C14", "D8", "E8", "F8", "G8", "H8", "I8", "J8", "K8", "L8", "M8", "N8", "O8", "P8", "Q8", "R8", "D17", "E17", "F17", "H17", "I17", "J17", "K17", "L17", "M17", "N17", "O17", "P17", "Q17", "R17"]
+celdas_tabla_balance = ["B4", "B5", "B6", "B7", "B8", "B9", "B10", "B11", "B12", "B13", "B14", "B15", "B16", "C1", "C2", "C3", "C4", "C5", "C6", "C7", "C8", "C9", "C10", "C11", "C12", "C13", "C14", "C15", "C16", "D4", "D5", "D6", "D7", "D8", "D9", "D10", "D11", "D11", "D12", "D13", "D14", "D15", "D16", "E4", "E5", "E6", "E7","E8","E9","E10", "E11", "E12", "E13", "E14", "E15", "E16"]
 # Verificar si la celda O1 contiene "2024-16EC"
 if str(identificador).strip() == "2024-16EC":
 
@@ -35,6 +35,9 @@ if str(identificador).strip() == "2024-16EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
+        valores_hr = obtener_valores("HR", celdas_hr)
+        print("Valores de la hoja HR:", valores_hr)
+
 
     if str(identificadorproducto).strip() == "VD":
         valores_modeloVD = obtener_valores("MODELO", celdas_modeloVD)
