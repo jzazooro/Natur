@@ -15,11 +15,15 @@ df_modelo = pd.read_excel(xls, sheet_name="MODELO", header=None)  # Cargar hoja 
 identificador = df_modelo.iloc[0, 14]  # O1 corresponde a la fila 1 (índice 0) y la columna 15 (índice 14)
 identificadorproducto = df_modelo.iloc[4, 6]  # O1 corresponde a la fila 1 (índice 0) y la columna 15 (índice 14)
 
+celdaidentificadora=["O1"]
+elemento=obtener_valores("MODELO", celdaidentificadora)
+print("Elemento:", elemento)
 
 
 
 
-if str(identificador).strip() == "2024-16EC" or "2024-21EC":
+if elemento == "2024-16EC" or "2024-21EC":
+    print("Hola")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G55", "G58", "G40", "G42", "G43", "G44", "G45", "G46", "G33", "G34", "G36", "O15", "O16"]
     celdas_modeloPPA = ["O19", "O21"]
@@ -48,8 +52,8 @@ if str(identificador).strip() == "2024-16EC" or "2024-21EC":
 
 
 
-
-if str(identificador).strip() == "2023-43EC" or "2024-05EC":
+if elemento == "2023-43EC" or "2024-05EC":
+    print("Adios1")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G55", "G40", "G42", "G43", "G44", "G45", "G46", "G33", "G34", "G36", "O15", "O16"]
     celdas_modeloPPA = ["O19", "O42"]
@@ -68,7 +72,7 @@ if str(identificador).strip() == "2023-43EC" or "2024-05EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
@@ -79,7 +83,8 @@ if str(identificador).strip() == "2023-43EC" or "2024-05EC":
 
 
 
-if str(identificador).strip() == "2023-27EC":
+if elemento == "2023-27EC":
+    print("Adios2")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G55", "G40", "G42", "G43", "G44", "G45", "G46", "G33", "G34", "G36", "O15", "O16"]
     celdas_modeloPPA = ["O19", "O42"]
@@ -98,7 +103,7 @@ if str(identificador).strip() == "2023-27EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
@@ -109,7 +114,8 @@ if str(identificador).strip() == "2023-27EC":
 
 
 
-if str(identificador).strip() == "2023-15EC":
+if elemento == "2023-15EC":
+    print("Adios3")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G48", "G42", "G45", "G43", "G44", "G47", "G37", "G38", "G46", "O15", "O16"]
     celdas_modeloPPA = ["O19", "O42"]
@@ -128,7 +134,7 @@ if str(identificador).strip() == "2023-15EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
@@ -139,7 +145,8 @@ if str(identificador).strip() == "2023-15EC":
 
 
 
-if str(identificador).strip() == "2023-11EC":
+if elemento == "2023-11EC":
+    print("Adios4")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G48", "G42", "G45", "G43", "G44", "G47", "G37", "G38", "G46", "O20", "O21"]
     celdas_modeloPPA = ["O24", "O47"]
@@ -158,7 +165,7 @@ if str(identificador).strip() == "2023-11EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
@@ -169,7 +176,8 @@ if str(identificador).strip() == "2023-11EC":
 
 
 
-if str(identificador).strip() == "2022-45EC":
+if elemento == "2022-45EC":
+    print("Adios5")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G47", "G41", "G44", "G42", "G34", "G46", "G36", "G37", "G45", "O20", "O21"]
     celdas_modeloPPA = ["O24", "O47"]
@@ -188,7 +196,7 @@ if str(identificador).strip() == "2022-45EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
@@ -199,7 +207,8 @@ if str(identificador).strip() == "2022-45EC":
 
 
 
-if str(identificador).strip() == "2022-41EC":
+if elemento == "2022-41EC":
+    print("Adios6")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G47", "G41", "G44", "G42", "G33", "G46", "G36", "G37", "G45", "O20", "O21"]
     celdas_modeloPPA = ["O24", "O47"]
@@ -218,7 +227,7 @@ if str(identificador).strip() == "2022-41EC":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
@@ -229,7 +238,8 @@ if str(identificador).strip() == "2022-41EC":
 
 
 
-if str(identificador).strip() == "2022-30":
+if elemento == "2022-30":
+    print("Adios7")
     # Celdas a extraer
     celdas_modelo = ["E2", "G4", "G5", "G46", "G40", "G43", "G41", "G33", "G45", "G35", "G36", "G44", "O20", "O21"]
     celdas_modeloPPA = ["O24", "O47"]
@@ -248,7 +258,7 @@ if str(identificador).strip() == "2022-30":
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
