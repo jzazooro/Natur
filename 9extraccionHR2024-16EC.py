@@ -1,5 +1,4 @@
 import pandas as pd
-from openpyxl import load_workbook
 
 # Cargar el archivo Excel (archivo habilitado para macros)
 archivo_excel = "HRNUEVO.xlsm"  # Reemplaza con tu archivo
@@ -32,10 +31,14 @@ if str(identificador).strip() == "2024-16EC" or "2024-21EC":
     valores_modelo = obtener_valores("MODELO", celdas_modelo)
     valores_tabla_balance = obtener_valores("TABLA BALANCE", celdas_tabla_balance)
 
+    # Imprimir resultados
+    print("Valores de la hoja MODELO:", valores_modelo)
+    print("Valores de la hoja TABLA BALANCE:", valores_tabla_balance)
+
     if str(identificadorproducto).strip() == "PPA":
         valores_modeloPPA = obtener_valores("MODELO", celdas_modeloPPA)
         print("Valores de la hoja MODELO en PPA:", valores_modeloPPA)
-        valores_hr = obtener_valores("HR", celdas_hr)
+        valores_hr = obtener_valores("6. HR", celdas_hr)
         print("Valores de la hoja HR:", valores_hr)
 
     if str(identificadorproducto).strip() == "VD":
